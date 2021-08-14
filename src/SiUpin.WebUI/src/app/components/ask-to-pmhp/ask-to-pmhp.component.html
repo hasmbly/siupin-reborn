@@ -1,0 +1,35 @@
+<h2 mat-dialog-title>Ask To PMHP</h2>
+<div mat-dialog-content>
+  <mat-grid-list cols="2" gutterSize="8px" rowHeight="3:1">
+    <mat-grid-tile colspan="1">
+      <div class="hs-grid-tile-content">
+        <mat-form-field appearance="fill" class="hs-input-full-width">
+          <mat-label>Nama</mat-label>
+          <input matInput [(ngModel)]="data.animal" />
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1">
+      <div class="hs-grid-tile-content">
+        <mat-form-field appearance="fill" class="hs-input-full-width">
+          <mat-label>Email</mat-label>
+          <input matInput [(ngModel)]="data.animal" />
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2">
+      <div class="hs-grid-tile-content">
+        <mat-form-field appearance="fill" class="hs-input-full-width">
+          <mat-label>Message</mat-label>
+          <textarea matInput [(ngModel)]="data.animal"></textarea>
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>
+    Submit
+  </button>
+</div>

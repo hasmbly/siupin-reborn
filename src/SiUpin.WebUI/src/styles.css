@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.header-spacer {
+  flex: 1 1 auto;
+}
+
+.button-spacer {
+  flex: 0.2 1 auto;
+}
+
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  min-height: 80vh;
+}
+
+main {
+  margin-top: 0px;
+  overflow-y: auto;
+}
+
+app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  color: #fff;
+}
+
+:focus {
+  outline: 0 !important;
+}
+
+table {
+  width: 100%;
+}
+
+.hs-grid-tile-content {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+}
+
+.toolbar-child {
+  height: 80px;
+}
+
+.hs-input-full-width {
+  width: 100%;
+}

@@ -1,0 +1,63 @@
+<mat-grid-list cols="2" rowHeight="2:1" style="margin-bottom: 2em">
+  <mat-grid-tile style="border-radius: 20px !important">
+    <div class="mat-display-1 hs-grid-tile-content" style="font-weight: bold">
+      Berita Seputar UPH
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile style="border-radius: 20px !important">
+    <img src="../assets/informasi.png" />
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="6" gutterSize="20px" rowHeight="2:1">
+  <mat-grid-tile colspan="2">
+    <div class="hs-grid-tile-content">
+      <mat-form-field appearance="fill" style="width: 25vw">
+        <mat-label>Cari Berita</mat-label>
+        <input width="100%" matInput type="text" [(ngModel)]="value" />
+        <mat-icon matPrefix>search</mat-icon>
+        <button
+          *ngIf="value"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="value = ''"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1">
+    <div class="hs-grid-tile-content"></div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list
+  cols="12"
+  gutterSize="10px"
+  rowHeight="1:5"
+  style="margin-top: 2em"
+>
+  <mat-grid-tile
+    colspan="4"
+    *ngFor="let item of [].constructor(beritaRow); let i = index"
+  >
+    <mat-card class="example-card mat-elevation-z3">
+      <mat-card-header>
+        <mat-card-title style="font-size: 14px"
+          >Berita Title {{ i }}</mat-card-title
+        >
+        <mat-card-subtitle>Jakarta Selatan</mat-card-subtitle>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+      <mat-card-content>
+        <p>The Shiba Inu is the smallest.</p>
+      </mat-card-content>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>

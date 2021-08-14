@@ -1,0 +1,100 @@
+<div
+  style="margin-bottom: 2em; height: 400px; border-radius: 20px !important"
+  class="mat-elevation-z3"
+>
+  <mat-carousel
+    slideHeight="100%"
+    [maintainAspectRatio]="false"
+    timings="200ms ease-in"
+    [autoplay]="true"
+    [interval]="3000"
+    timings="250ms ease-in"
+    [autoplay]="true"
+    maxWidth="auto"
+    [loop]="true"
+    [hideArrows]="true"
+    [hideIndicators]="false"
+    [useKeyboard]="true"
+    [useMouseWheel]="false"
+    orientation="ltr"
+  >
+    <!-- there's an issue in here 'NG0100' -->
+    <mat-carousel-slide overlayColor="#ffffff" [hideOverlay]="false">
+      <img
+        style="width: inherit; height: inherit; border-radius: 20px !important"
+        src="../assets/carousel/sapi.jpg"
+      />
+    </mat-carousel-slide>
+    <mat-carousel-slide overlayColor="#ffffff" [hideOverlay]="false">
+      <img
+        style="width: inherit; height: inherit; border-radius: 20px !important"
+        src="../assets/carousel/daging.jpg"
+      />
+    </mat-carousel-slide>
+    <mat-carousel-slide overlayColor="#ffffff" [hideOverlay]="false">
+      <img
+        style="width: inherit; height: inherit; border-radius: 20px !important"
+        src="../assets/carousel/telur.jpg"
+      />
+    </mat-carousel-slide>
+    <mat-carousel-slide overlayColor="#ffffff" [hideOverlay]="false">
+      <img
+        style="width: inherit; height: inherit; border-radius: 20px !important"
+        src="../assets/carousel/unggas.png"
+      />
+    </mat-carousel-slide>
+  </mat-carousel>
+</div>
+
+<mat-grid-list cols="6" rowHeight="1:1" gutterSize="10px">
+  <mat-grid-tile style="border-radius: 20px !important" class="mat-elevation-z3"
+    ><img src="../assets/categories/web_daging.png" />
+    <mat-grid-tile-footer style="justify-content: center; height: 35px">
+      Daging
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+  <mat-grid-tile style="border-radius: 20px !important" class="mat-elevation-z3"
+    ><img src="../assets/categories/web_limbah.png" />
+    <mat-grid-tile-footer style="justify-content: center; height: 35px">
+      Limbah
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+  <mat-grid-tile style="border-radius: 20px !important" class="mat-elevation-z3"
+    ><img src="../assets/categories/web_susu.png" />
+    <mat-grid-tile-footer style="justify-content: center; height: 35px">
+      Susu
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+  <mat-grid-tile style="border-radius: 20px !important" class="mat-elevation-z3"
+    ><img src="../assets/categories/web_ternak.png" />
+    <mat-grid-tile-footer style="justify-content: center; height: 35px">
+      Ternak
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+  <mat-grid-tile style="border-radius: 20px !important" class="mat-elevation-z3"
+    ><img src="../assets/categories/web_unggas.png" />
+    <mat-grid-tile-footer style="justify-content: center; height: 35px">
+      Unggas
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+  <mat-grid-tile
+    style="border-radius: 20px !important"
+    class="mat-elevation-z3"
+  >
+    <mat-icon
+      color="primary"
+      style="font-size: 120px; height: auto; width: auto"
+      >dashboard</mat-icon
+    >
+    <mat-grid-tile-footer style="justify-content: center; height: 35px">
+      Katalog
+    </mat-grid-tile-footer>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<div
+  style="margin-top: 2em; height: 500px; border-radius: 20px !important"
+  class="mat-elevation-z3"
+>
+  <app-map></app-map>
+</div>

@@ -1,0 +1,17 @@
+.example-card {
+  max-width: 400px;
+  min-height: 450px;
+  max-height: 450px;
+}
+
+.mat-card-title {
+  font-size: 1.15em;
+}
+
+.mat-card-subtitle {
+  font-size: 0.8em;
+}
+
+.hs-card-icon {
+  width: 15px;
+}

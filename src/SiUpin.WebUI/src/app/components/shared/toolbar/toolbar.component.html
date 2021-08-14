@@ -1,0 +1,135 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="mat-elevation-z8">
+    <img
+      style="width: 220px; height: 40px"
+      src="../assets/logo-siupin-white.png"
+    />
+
+    <span class="header-spacer"></span>
+    <a mat-button routerLink="/home">Home</a>
+    <a mat-button routerLink="/uph">UPH</a>
+    <a mat-button routerLink="/cluster">Cluster</a>
+    <a mat-button routerLink="/katalog">Katalog</a>
+    <a mat-button routerLink="/berita">Berita</a>
+    <a mat-button [matMenuTriggerFor]="menu"> Regulasi </a>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Undang - undang</button>
+      <button mat-menu-item>Peraturan Pemerintah</button>
+      <button mat-menu-item>Buku Kemitraan</button>
+    </mat-menu>
+
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+
+    <button mat-icon-button aria-label="Twitter">
+      <mat-icon>
+        <span
+          class="iconify"
+          data-icon="mdi-twitter"
+          data-inline="false"
+        ></span>
+      </mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Facebook">
+      <mat-icon>
+        <span
+          class="iconify"
+          data-icon="brandico:facebook"
+          data-inline="false"
+        ></span>
+      </mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Instagram">
+      <mat-icon>
+        <span
+          class="iconify"
+          data-icon="ant-design:instagram-filled"
+          data-inline="false"
+        ></span>
+      </mat-icon>
+    </button>
+
+    <span class="header-spacer"></span>
+    <a mat-raised-button color="primary">
+      <mat-icon
+        class="material-icons-outlined"
+        aria-hidden="false"
+        aria-label="Login"
+        >login</mat-icon
+      >
+      Login
+    </a>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="toolbar-child mat-elevation-z3">
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+
+    <a
+      mat-raised-button
+      class="mat-elevation-z8"
+      matBadge="1"
+      matBadgePosition="after"
+      matBadgeColor="accent"
+      disableRipple="true"
+      style="cursor: default"
+    >
+      <mat-icon color="warn">groups</mat-icon>
+      Pengunjung hari ini
+    </a>
+    <span class="button-spacer"></span>
+    <a
+      mat-raised-button
+      class="mat-elevation-z8"
+      matBadge="8"
+      matBadgePosition="after"
+      matBadgeColor="accent"
+      disableRipple="true"
+      style="cursor: default"
+    >
+      <mat-icon style="color: yellowgreen">groups</mat-icon>
+      Total Pengunjung
+    </a>
+    <span class="button-spacer"></span>
+    <a
+      mat-raised-button
+      class="mat-elevation-z8"
+      matBadge="1"
+      matBadgePosition="after"
+      matBadgeColor="accent"
+      disableRipple="true"
+      style="cursor: default"
+    >
+      <mat-icon color="accent">groups</mat-icon>
+      Pengunjung Online
+    </a>
+
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+    <a
+      mat-raised-button
+      class="mat-elevation-z8"
+      disableRipple="true"
+      style="cursor: default"
+    >
+      <mat-icon>phone_iphone</mat-icon>
+      0813-2808-1793
+    </a>
+    <span class="button-spacer"></span>
+    <a mat-raised-button class="mat-elevation-z8" (click)="openDialog()">
+      <mat-icon>support_agent</mat-icon>
+      Ask to PMHP
+    </a>
+
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+  </mat-toolbar-row>
+</mat-toolbar>

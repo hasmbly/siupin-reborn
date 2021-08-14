@@ -1,0 +1,12 @@
+{
+  "webApi": {
+    "port": 4000
+  },
+  "database": {
+    "db": "",
+    "username": "",
+    "password": "",
+    "port": ""
+  },
+  "logLevel": "error"
+}

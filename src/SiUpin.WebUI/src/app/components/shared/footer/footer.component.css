@@ -1,0 +1,35 @@
+footer {
+    display: block;
+}
+
+.docs-footer-list {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+}
+
+.docs-footer {
+    background: #3f51b5;
+    color: #fff;
+    font-size: 12px;
+    padding: 15px;
+    padding-left: 180px;
+    padding-right: 180px;
+}
+
+.docs-footer-copyright {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    flex-direction: column;
+    min-width: 225px;
+    margin-top: 0;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
