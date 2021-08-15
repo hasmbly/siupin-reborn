@@ -1,8 +1,10 @@
+import "./infrastructure/database/dbcontext";
 import express, { Application, Request, Response, NextFunction } from "express";
 import MiddlewareLogger from "./infrastructure/logger/middlewareLogger";
 import cors from "cors";
 import config from "config";
-import Logger from "./infrastructure/logger/appLogger";
+import AppLogger from "./infrastructure/logger/appLogger";
+import { getAllBerita } from "./models/berita.model";
 
 const path = __dirname + "/views/";
 const app: Application = express();
@@ -25,13 +27,21 @@ app.get(
 );
 
 app.get("/logger", (_, res) => {
-  Logger.error("This is an error log");
-  Logger.warn("This is a warn log");
-  Logger.info("This is a info log");
-  Logger.http("This is a http log");
-  Logger.debug("This is a debug log");
+  AppLogger.error("This is an error log");
+  AppLogger.warn("This is a warn log");
+  AppLogger.info("This is a info log");
+  AppLogger.http("This is a http log");
+  AppLogger.debug("This is a debug log");
 
-  res.send("Hello world");
+  res.send("Hello Logger");
+});
+
+app.get("/berita", async (_, response) => {
+  const beritas = await getAllBerita();
+
+  console.log(`getAllBerita - index.ts: ${JSON.stringify(beritas)}`);
+
+  response.json(beritas);
 });
 
 const PORT = process.env.PORT || config.get("webApi.port");

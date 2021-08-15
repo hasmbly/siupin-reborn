@@ -1,12 +1,4 @@
-import {
-  Model,
-  PrimaryKey,
-  Column,
-  Table,
-  DataType,
-  Index,
-  Length,
-} from "sequelize-typescript";
+import { Model, PrimaryKey, Column, Table, Index } from "sequelize-typescript";
 
 interface IUser {
   name: string;
@@ -19,11 +11,10 @@ interface IUser {
 @Table
 class User extends Model<IUser> implements IUser {
   @PrimaryKey
-  @Column(DataType.UUID)
-  public id!: string;
+  @Column
+  public UserID!: string;
 
   @Index
-  @Length({ min: 3, max: 200 })
   public name!: string;
 
   @Index

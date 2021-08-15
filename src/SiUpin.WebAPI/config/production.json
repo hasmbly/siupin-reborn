@@ -1,6 +1,6 @@
 {
   "webApi": {
-    "port": 4000
+    "port": 8080
   },
   "databaseConfig": {
     "host": "localhost",

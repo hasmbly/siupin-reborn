@@ -1,10 +1,12 @@
 import config from "config";
 import { Sequelize } from "sequelize-typescript";
+import { Berita } from "../../models/berita.model";
+import appLogger from "../logger/appLogger";
 
-const database: string = config.get("dbconfig.db");
-const username: string = config.get("dbconfig.username");
-const password: string = config.get("dbconfig.password");
-const port: number = config.get("dbconfig.port");
+const database: string = config.get("databaseConfig.database");
+const username: string = config.get("databaseConfig.username");
+const password: string = config.get("databaseConfig.password");
+const port: number = config.get("databaseConfig.port");
 
 export const sequelize = new Sequelize(database, username, password, {
   port: port,
@@ -12,10 +14,9 @@ export const sequelize = new Sequelize(database, username, password, {
   dialect: "mysql",
   username: username,
   password: password,
-  models: [__dirname + "/models/**/*.model.ts"],
-  modelMatch: (filename, member) => {
-    return (
-      filename.substring(0, filename.indexOf(".model")) === member.toLowerCase()
-    );
-  },
+  models: [Berita],
+});
+
+sequelize.databaseVersion().then((databaseVersion) => {
+  appLogger.info("databaseVersion: " + databaseVersion);
 });
