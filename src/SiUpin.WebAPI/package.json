@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc --build",
     "start": "tsc --build && node .",
+    "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "hasbi",
@@ -22,6 +23,7 @@
     "morgan": "^1.10.0",
     "mysql2": "^2.3.0",
     "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
     "sequelize": "^6.6.5",
     "sequelize-typescript": "^2.1.0",
     "winston": "^3.3.3"
@@ -37,6 +39,7 @@
     "@types/jsonwebtoken": "^8.5.4",
     "@types/morgan": "^1.9.3",
     "@types/node": "^16.6.1",
+    "@types/rimraf": "^3.0.1",
     "@types/sequelize": "^4.28.10",
     "@types/validator": "^13.6.3",
     "@types/winston": "^2.4.4",

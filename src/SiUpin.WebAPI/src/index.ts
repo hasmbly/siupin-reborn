@@ -6,7 +6,7 @@ import config from "config";
 import AppLogger from "./infrastructure/logger/appLogger";
 import { getAllBerita } from "./models/berita.model";
 
-const path = __dirname + "/views/";
+const path = "./public/";
 const app: Application = express();
 
 var corsOptions = {
