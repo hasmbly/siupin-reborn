@@ -39,8 +39,6 @@ app.get("/logger", (_, res) => {
 app.get("/berita", async (_, response) => {
   const beritas = await getAllBerita();
 
-  console.log(`getAllBerita - index.ts: ${JSON.stringify(beritas)}`);
-
   response.json(beritas);
 });
 

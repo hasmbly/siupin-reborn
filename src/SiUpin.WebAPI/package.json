@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
+    "start": "rimraf dist && tsc --build && node .",
     "build": "tsc --build",
-    "start": "tsc --build && node .",
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

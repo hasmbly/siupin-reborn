@@ -8,13 +8,13 @@ import {
 } from "sequelize-typescript";
 
 interface IBerita {
-  Title: string;
   BeritaID: string;
+  Title: string;
+  Description: string;
   CreatedBy: string;
   Created: Date;
   LastModified: Date;
   id_berita: string;
-  Description: Text;
 }
 
 @Table({
@@ -26,8 +26,11 @@ export class Berita extends Model<IBerita> implements IBerita {
   @Column
   public BeritaID!: string;
 
+  @Column
   public Title!: string;
-  public Description!: Text;
+
+  @Column
+  public Description!: string;
 
   @CreatedAt
   public Created!: Date;
@@ -35,8 +38,10 @@ export class Berita extends Model<IBerita> implements IBerita {
   @UpdatedAt
   public LastModified!: Date;
 
+  @Column
   public CreatedBy!: string;
 
+  @Column
   public id_berita!: string;
 
   public constructor(init?: Partial<Berita>) {
@@ -47,8 +52,6 @@ export class Berita extends Model<IBerita> implements IBerita {
 
 export async function getAllBerita(): Promise<Berita[]> {
   const beritas = await Berita.findAll();
-
-  console.log(`getAllBerita: ${JSON.stringify(beritas)}`);
 
   return beritas;
 }
