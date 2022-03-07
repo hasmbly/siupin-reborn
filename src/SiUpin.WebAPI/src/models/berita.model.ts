@@ -1,19 +1,10 @@
-import {
-  Model,
-  PrimaryKey,
-  Column,
-  Table,
-  CreatedAt,
-  UpdatedAt,
-} from "sequelize-typescript";
+import { Column, Table } from "sequelize-typescript";
+import { Entity, IEntity } from "./entity.model";
 
-interface IBerita {
+interface IBerita extends IEntity {
   BeritaID: string;
   Title: string;
   Description: string;
-  CreatedBy: string;
-  Created: Date;
-  LastModified: Date;
   id_berita: string;
 }
 
@@ -21,26 +12,14 @@ interface IBerita {
   modelName: "Berita",
   tableName: "beritas",
 })
-export class Berita extends Model<IBerita> implements IBerita {
-  @PrimaryKey
-  @Column
+export class Berita extends Entity<IBerita> implements IBerita {
+  @Column({ primaryKey: true })
   public BeritaID!: string;
 
   @Column
   public Title!: string;
-
   @Column
   public Description!: string;
-
-  @CreatedAt
-  public Created!: Date;
-
-  @UpdatedAt
-  public LastModified!: Date;
-
-  @Column
-  public CreatedBy!: string;
-
   @Column
   public id_berita!: string;
 
@@ -48,10 +27,4 @@ export class Berita extends Model<IBerita> implements IBerita {
     super();
     Object.assign(this, init);
   }
-}
-
-export async function getAllBerita(): Promise<Berita[]> {
-  const beritas = await Berita.findAll();
-
-  return beritas;
 }

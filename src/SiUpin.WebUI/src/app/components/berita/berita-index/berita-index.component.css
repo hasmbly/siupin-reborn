@@ -1,17 +1,26 @@
-.example-card {
+.example-card
+{
   max-width: 400px;
   min-height: 450px;
   max-height: 450px;
 }
 
-.mat-card-title {
+.mat-card-title
+{
   font-size: 1.15em;
 }
 
-.mat-card-subtitle {
+.mat-card-subtitle
+{
   font-size: 0.8em;
 }
 
-.hs-card-icon {
+.hs-card-icon
+{
   width: 15px;
+}
+
+.berita-input-search
+{
+  width: 100%;
 }

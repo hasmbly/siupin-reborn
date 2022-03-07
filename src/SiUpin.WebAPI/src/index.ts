@@ -3,14 +3,17 @@ import express, { Application, Request, Response, NextFunction } from "express";
 import MiddlewareLogger from "./infrastructure/logger/middlewareLogger";
 import cors from "cors";
 import config from "config";
-import AppLogger from "./infrastructure/logger/appLogger";
-import { getAllBerita } from "./models/berita.model";
+import _logger from "./infrastructure/logger/appLogger";
+import { userRouter } from "./routers/user.router";
+import { tokenGuard } from "./middlewares/token-guard";
+import { beritaRouter } from "./routers/berita.router";
 
-const path = "./public/";
+const path = __dirname + "/public/";
 const app: Application = express();
+const PORT = process.env.PORT || config.get("webApi.port");
 
-var corsOptions = {
-  origin: "http://localhost:8081",
+const corsOptions = {
+    origin: "http://localhost:4200",
 };
 
 app.use(express.static(path));
@@ -20,30 +23,33 @@ app.use(express.urlencoded({ extended: true }));
 app.use(MiddlewareLogger);
 
 app.get(
-  "/",
-  (_request: Request, response: Response, nextFunction: NextFunction) => {
-    response.sendFile(path + "index.html");
-  }
+    "/",
+    (_request: Request, response: Response, nextFunction: NextFunction) => {
+        response.sendFile(path + "index.html");
+    }
 );
 
-app.get("/logger", (_, res) => {
-  AppLogger.error("This is an error log");
-  AppLogger.warn("This is a warn log");
-  AppLogger.info("This is a info log");
-  AppLogger.http("This is a http log");
-  AppLogger.debug("This is a debug log");
+app.get("/logger", (_, response) => {
+    _logger.error("This is an error log");
+    _logger.warn("This is a warn log");
+    _logger.info("This is a info log");
+    _logger.http("This is a http log");
+    _logger.debug("This is a debug log");
 
-  res.send("Hello Logger");
+    response.send("Hello Logger");
 });
 
-app.get("/berita", async (_, response) => {
-  const beritas = await getAllBerita();
+// Unauthorized Endpoint
+app.use("/api/users", userRouter);
+app.use("/api/berita", beritaRouter);
 
-  response.json(beritas);
+app.use(tokenGuard());
+
+// Authorized Endpoint
+app.use("*", (_, response) => {
+    response.sendFile(path);
 });
-
-const PORT = process.env.PORT || config.get("webApi.port");
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+    console.log(`Server is running on port ${PORT}.`);
 });

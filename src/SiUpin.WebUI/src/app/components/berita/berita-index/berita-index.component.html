@@ -14,15 +14,13 @@
     <div class="hs-grid-tile-content">
       <mat-form-field appearance="fill" style="width: 25vw">
         <mat-label>Cari Berita</mat-label>
-        <input width="100%" matInput type="text" [(ngModel)]="value" />
+        <input class="berita-input-search" matInput type="text" [(ngModel)]="value" />
         <mat-icon matPrefix>search</mat-icon>
-        <button
-          *ngIf="value"
-          matSuffix
-          mat-icon-button
-          aria-label="Clear"
-          (click)="value = ''"
-        >
+        <button *ngIf="value"
+                matSuffix
+                mat-icon-button
+                aria-label="Clear"
+                (click)="value = ''">
           <mat-icon>close</mat-icon>
         </button>
       </mat-form-field>
@@ -33,28 +31,20 @@
   </mat-grid-tile>
 </mat-grid-list>
 
-<mat-grid-list
-  cols="12"
-  gutterSize="10px"
-  rowHeight="1:5"
-  style="margin-top: 2em"
->
-  <mat-grid-tile
-    colspan="4"
-    *ngFor="let item of [].constructor(beritaRow); let i = index"
-  >
+<mat-grid-list cols="12"
+               gutterSize="10px"
+               rowHeight="1:5"
+               style="margin-top: 2em">
+  <mat-grid-tile colspan="4"
+                 *ngFor="let item of [].constructor(beritaRow); let i = index">
     <mat-card class="example-card mat-elevation-z3">
       <mat-card-header>
-        <mat-card-title style="font-size: 14px"
-          >Berita Title {{ i }}</mat-card-title
-        >
+        <mat-card-title style="font-size: 14px">Berita Title {{ i }}</mat-card-title>
         <mat-card-subtitle>Jakarta Selatan</mat-card-subtitle>
       </mat-card-header>
-      <img
-        mat-card-image
-        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-        alt="Photo of a Shiba Inu"
-      />
+      <img mat-card-image
+           src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+           alt="Photo of a Shiba Inu" />
       <mat-card-content>
         <p>The Shiba Inu is the smallest.</p>
       </mat-card-content>

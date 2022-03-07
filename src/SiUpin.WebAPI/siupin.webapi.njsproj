@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{77f7b35b-d140-4ca1-a2bb-576697937902}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectView>ProjectFiles</ProjectView>
+    <StartupFile>dist\index.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <EnableTypeScript>true</EnableTypeScript>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">17.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <None Include="tsconfig.json" />
+    <Content Include="config\development.json" />
+    <Content Include="config\production.json" />
+    <None Include="src\index.ts" />
+    <None Include="src\common\appUtility.ts" />
+    <None Include="src\middlewares\token-guard.ts" />
+    <None Include="src\models\berita.model.ts" />
+    <None Include="src\models\entity.model.ts" />
+    <None Include="src\models\user.model.ts" />
+    <None Include="src\routers\berita.router.ts" />
+    <None Include="src\routers\user.router.ts" />
+    <None Include="src\rules\berita.rules.ts" />
+    <None Include="src\rules\user.rules.ts" />
+    <None Include="src\services\berita.service.ts" />
+    <None Include="src\services\user.service.ts" />
+    <None Include="src\infrastructure\database\dbcontext.ts" />
+    <None Include="src\infrastructure\logger\appLogger.ts" />
+    <None Include="src\infrastructure\logger\middlewareLogger.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="config" />
+    <Folder Include="dist" />
+    <Folder Include="dist\common" />
+    <Folder Include="dist\infrastructure" />
+    <Folder Include="dist\infrastructure\database" />
+    <Folder Include="dist\infrastructure\logger" />
+    <Folder Include="dist\middlewares" />
+    <Folder Include="dist\models" />
+    <Folder Include="dist\routers" />
+    <Folder Include="dist\rules" />
+    <Folder Include="dist\services" />
+    <Folder Include="logs" />
+    <Folder Include="src" />
+    <Folder Include="src\common" />
+    <Folder Include="src\infrastructure" />
+    <Folder Include="src\infrastructure\database" />
+    <Folder Include="src\infrastructure\logger" />
+    <Folder Include="src\middlewares" />
+    <Folder Include="src\models" />
+    <Folder Include="src\routers" />
+    <Folder Include="src\rules" />
+    <Folder Include="src\services" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

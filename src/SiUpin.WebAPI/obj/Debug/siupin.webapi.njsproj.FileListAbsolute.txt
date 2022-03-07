@@ -1,0 +1,3 @@
+D:\Repository\Projects\SiUpin\src\siupin.webapi\obj\Debug\siupin.webapi.njsproj.AssemblyReference.cache
+D:\Repository\Projects\SiUpin\src\siupin.webapi\obj\Debug\siupin.webapi.njsproj.CoreCompileInputs.cache
+D:\Repository\Projects\SiUpin\src\siupin.webapi\bin\Microsoft.NodejsTools.WebRole.dll

@@ -1,7 +1,8 @@
 import config from "config";
 import { Sequelize } from "sequelize-typescript";
 import { Berita } from "../../models/berita.model";
-import appLogger from "../logger/appLogger";
+import { User } from "../../models/user.model";
+import _logger from "../logger/appLogger";
 
 const database: string = config.get("databaseConfig.database");
 const username: string = config.get("databaseConfig.username");
@@ -14,9 +15,9 @@ export const sequelize = new Sequelize(database, username, password, {
   dialect: "mysql",
   username: username,
   password: password,
-  models: [Berita],
+  models: [Berita, User],
 });
 
 sequelize.databaseVersion().then((databaseVersion) => {
-  appLogger.info("databaseVersion: " + databaseVersion);
+  _logger.info("databaseVersion: " + databaseVersion);
 });

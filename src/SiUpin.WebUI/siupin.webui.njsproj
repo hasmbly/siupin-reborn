@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{510b49f5-278c-4743-82f4-a723a61fdb43}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectView>ProjectFiles</ProjectView>
+    <StartupFile />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <EnableTypeScript>true</EnableTypeScript>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">17.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="angular.json" />
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include="tsconfig.app.json" />
+    <None Include="tsconfig.json" />
+    <Content Include="tsconfig.spec.json" />
+    <Content Include="config\development.json" />
+    <Content Include="config\production.json" />
+    <Content Include="src\index.html" />
+    <Content Include="src\styles.css" />
+    <Content Include="src\favicon.ico" />
+    <None Include="src\main.ts" />
+    <None Include="src\polyfills.ts" />
+    <None Include="src\test.ts" />
+    <Content Include="src\app\app.component.html" />
+    <Content Include="src\app\app.component.css" />
+    <None Include="src\app\app-routing.module.ts" />
+    <None Include="src\app\app.component.spec.ts" />
+    <None Include="src\app\app.component.ts" />
+    <None Include="src\app\app.module.ts" />
+    <Content Include="src\assets\cluster.png" />
+    <Content Include="src\assets\data-uph.png" />
+    <Content Include="src\assets\icon-512.png" />
+    <Content Include="src\assets\icon-nav.png" />
+    <Content Include="src\assets\informasi.png" />
+    <Content Include="src\assets\log-in-ayam.png" />
+    <Content Include="src\assets\log-in.png" />
+    <Content Include="src\assets\loginsapi.png" />
+    <Content Include="src\assets\logo-siupin-white.png" />
+    <Content Include="src\assets\produk_olahan.png" />
+    <Content Include="src\assets\purple-cat.png" />
+    <Content Include="src\assets\splash_welcome.png" />
+    <Content Include="src\assets\404_not_found.jpg" />
+    <Content Include="src\assets\under_construction.jpg" />
+    <None Include="src\environments\environment.prod.ts" />
+    <None Include="src\environments\environment.ts" />
+    <None Include="src\models\berita.ts" />
+    <None Include="src\models\user.ts" />
+    <None Include="src\app\service\data.service.ts" />
+    <Content Include="src\app\components\ask-to-pmhp\ask-to-pmhp.component.html" />
+    <Content Include="src\app\components\ask-to-pmhp\ask-to-pmhp.component.css" />
+    <None Include="src\app\components\ask-to-pmhp\ask-to-pmhp.component.spec.ts" />
+    <None Include="src\app\components\ask-to-pmhp\ask-to-pmhp.component.ts" />
+    <Content Include="src\app\components\contact-us\contact-us.component.html" />
+    <Content Include="src\app\components\contact-us\contact-us.component.css" />
+    <None Include="src\app\components\contact-us\contact-us.component.spec.ts" />
+    <None Include="src\app\components\contact-us\contact-us.component.ts" />
+    <Content Include="src\app\components\demo\demo.component.html" />
+    <Content Include="src\app\components\demo\demo.component.css" />
+    <None Include="src\app\components\demo\demo.component.spec.ts" />
+    <None Include="src\app\components\demo\demo.component.ts" />
+    <Content Include="src\app\components\home\home.component.html" />
+    <Content Include="src\app\components\home\home.component.css" />
+    <None Include="src\app\components\home\home.component.spec.ts" />
+    <None Include="src\app\components\home\home.component.ts" />
+    <Content Include="src\app\components\berita\berita-index\berita-index.component.html" />
+    <Content Include="src\app\components\berita\berita-index\berita-index.component.css" />
+    <None Include="src\app\components\berita\berita-index\berita-index.component.spec.ts" />
+    <None Include="src\app\components\berita\berita-index\berita-index.component.ts" />
+    <Content Include="src\app\components\cluster\cluster-index\cluster-index.component.html" />
+    <Content Include="src\app\components\cluster\cluster-index\cluster-index.component.css" />
+    <None Include="src\app\components\cluster\cluster-index\cluster-index.component.spec.ts" />
+    <None Include="src\app\components\cluster\cluster-index\cluster-index.component.ts" />
+    <Content Include="src\app\components\layouts\admin-layout\admin-layout.component.html" />
+    <Content Include="src\app\components\layouts\admin-layout\admin-layout.component.css" />
+    <None Include="src\app\components\layouts\admin-layout\admin-layout.component.spec.ts" />
+    <None Include="src\app\components\layouts\admin-layout\admin-layout.component.ts" />
+    <Content Include="src\app\components\layouts\home-layout\home-layout.component.html" />
+    <Content Include="src\app\components\layouts\home-layout\home-layout.component.css" />
+    <None Include="src\app\components\layouts\home-layout\home-layout.component.spec.ts" />
+    <None Include="src\app\components\layouts\home-layout\home-layout.component.ts" />
+    <Content Include="src\app\components\shared\footer\footer.component.html" />
+    <Content Include="src\app\components\shared\footer\footer.component.css" />
+    <None Include="src\app\components\shared\footer\footer.component.spec.ts" />
+    <None Include="src\app\components\shared\footer\footer.component.ts" />
+    <Content Include="src\app\components\shared\map\map.component.html" />
+    <Content Include="src\app\components\shared\map\map.component.css" />
+    <None Include="src\app\components\shared\map\map.component.spec.ts" />
+    <None Include="src\app\components\shared\map\map.component.ts" />
+    <Content Include="src\app\components\shared\side-nav\side-nav.component.html" />
+    <Content Include="src\app\components\shared\side-nav\side-nav.component.css" />
+    <None Include="src\app\components\shared\side-nav\side-nav.component.spec.ts" />
+    <None Include="src\app\components\shared\side-nav\side-nav.component.ts" />
+    <Content Include="src\app\components\shared\toolbar\toolbar.component.html" />
+    <Content Include="src\app\components\shared\toolbar\toolbar.component.css" />
+    <None Include="src\app\components\shared\toolbar\toolbar.component.spec.ts" />
+    <None Include="src\app\components\shared\toolbar\toolbar.component.ts" />
+    <Content Include="src\app\components\uph\uph-index\uph-index.component.html" />
+    <Content Include="src\app\components\uph\uph-index\uph-index.component.css" />
+    <None Include="src\app\components\uph\uph-index\uph-index.component.spec.ts" />
+    <None Include="src\app\components\uph\uph-index\uph-index.component.ts" />
+    <Content Include="src\app\components\uph-produk\uph-produk-index\uph-produk-index.component.html" />
+    <Content Include="src\app\components\uph-produk\uph-produk-index\uph-produk-index.component.css" />
+    <None Include="src\app\components\uph-produk\uph-produk-index\uph-produk-index.component.spec.ts" />
+    <None Include="src\app\components\uph-produk\uph-produk-index\uph-produk-index.component.ts" />
+    <Content Include="src\assets\carousel\unggas.png" />
+    <Content Include="src\assets\carousel\daging.jpg" />
+    <Content Include="src\assets\carousel\sapi.jpg" />
+    <Content Include="src\assets\carousel\susu.jpg" />
+    <Content Include="src\assets\carousel\telur.jpg" />
+    <Content Include="src\assets\categories\web_daging.png" />
+    <Content Include="src\assets\categories\web_limbah.png" />
+    <Content Include="src\assets\categories\web_susu.png" />
+    <Content Include="src\assets\categories\web_ternak.png" />
+    <Content Include="src\assets\categories\web_unggas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="config" />
+    <Folder Include="dist" />
+    <Folder Include="src" />
+    <Folder Include="src\app" />
+    <Folder Include="src\app\components" />
+    <Folder Include="src\app\components\ask-to-pmhp" />
+    <Folder Include="src\app\components\berita" />
+    <Folder Include="src\app\components\berita\berita-index" />
+    <Folder Include="src\app\components\cluster" />
+    <Folder Include="src\app\components\cluster\cluster-index" />
+    <Folder Include="src\app\components\contact-us" />
+    <Folder Include="src\app\components\demo" />
+    <Folder Include="src\app\components\home" />
+    <Folder Include="src\app\components\layouts" />
+    <Folder Include="src\app\components\layouts\admin-layout" />
+    <Folder Include="src\app\components\layouts\home-layout" />
+    <Folder Include="src\app\components\shared" />
+    <Folder Include="src\app\components\shared\footer" />
+    <Folder Include="src\app\components\shared\map" />
+    <Folder Include="src\app\components\shared\side-nav" />
+    <Folder Include="src\app\components\shared\toolbar" />
+    <Folder Include="src\app\components\uph" />
+    <Folder Include="src\app\components\uph\uph-index" />
+    <Folder Include="src\app\components\uph-produk" />
+    <Folder Include="src\app\components\uph-produk\uph-produk-index" />
+    <Folder Include="src\app\service" />
+    <Folder Include="src\assets" />
+    <Folder Include="src\assets\carousel" />
+    <Folder Include="src\assets\categories" />
+    <Folder Include="src\environments" />
+    <Folder Include="src\models" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
