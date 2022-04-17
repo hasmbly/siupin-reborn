@@ -38,6 +38,7 @@ import { BeritaIndexComponent } from './components/berita/berita-index/berita-in
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AskToPmhpComponent } from './components/ask-to-pmhp/ask-to-pmhp.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     BeritaIndexComponent,
     ContactUsComponent,
     AskToPmhpComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

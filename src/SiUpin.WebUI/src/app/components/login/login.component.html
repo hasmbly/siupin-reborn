@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Login</h2>
+<div mat-dialog-content>
+  <mat-grid-list cols="1" gutterSize="8px" rowHeight="5:1">
+    <mat-grid-tile colspan="1">
+      <div class="hs-grid-tile-content">
+        <mat-form-field appearance="fill" class="hs-input-full-width">
+          <mat-label>Username</mat-label>
+          <input matInput [(ngModel)]="data.username" />
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1">
+      <div class="hs-grid-tile-content">
+        <mat-form-field appearance="fill" class="hs-input-full-width">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" [(ngModel)]="data.password" />
+        </mat-form-field>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="onSubmit()" cdkFocusInitial>
+    Submit
+  </button>
+</div>
