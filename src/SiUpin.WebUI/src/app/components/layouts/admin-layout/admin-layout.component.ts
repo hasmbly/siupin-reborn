@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-admin-layout',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminLayoutComponent implements OnInit {
 
+  mode = new FormControl('side');
+  shouldRun = true;
+  isShowing: boolean = true;
+  
   constructor() { }
 
-  ngOnInit(): void {
+  onTriggeredSideNav(): void {
+    this.isShowing = !this.isShowing;
   }
 
+  ngOnInit(): void {}
 }

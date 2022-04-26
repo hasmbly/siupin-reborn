@@ -29,6 +29,6 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     this.dialogRef.close();
-    this.router.navigateByUrl('/katalog');
+    this.router.navigateByUrl('/admin');
   }
 }

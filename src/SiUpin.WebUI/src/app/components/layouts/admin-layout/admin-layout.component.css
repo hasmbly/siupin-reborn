@@ -12,3 +12,11 @@ mat-grid-tile {
 header {
     display: block;
 }
+
+mat-sidenav {
+    width: 240px;
+  }
+
+.mat-list-item {
+    color: #000000a6;
+}

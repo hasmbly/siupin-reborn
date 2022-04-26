@@ -1,4 +1,3 @@
-import { string } from '@amcharts/amcharts4/core';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AskToPmhpComponent } from '../../ask-to-pmhp/ask-to-pmhp.component';

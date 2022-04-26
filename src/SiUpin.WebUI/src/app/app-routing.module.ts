@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { BeritaIndexComponent } from './components/berita/berita-index/berita-index.component';
 
 import { ClusterIndexComponent } from './components/cluster/cluster-index/cluster-index.component';
 import { HomeComponent } from './components/home/home.component';
+import { AdminLayoutComponent } from './components/layouts/admin-layout/admin-layout.component';
 import { HomeLayoutComponent } from './components/layouts/home-layout/home-layout.component';
 import { UphProdukIndexComponent } from './components/uph-produk/uph-produk-index/uph-produk-index.component';
 import { UphIndexComponent } from './components/uph/uph-index/uph-index.component';
@@ -60,6 +62,17 @@ const routes: Routes = [
       },
     ],
   },
+  { path: 'admin', redirectTo: 'admin/dashboard', pathMatch: 'full' },
+  {
+    path: 'admin/dashboard',
+    component: AdminLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: DashboardComponent,
+      },
+    ],
+  },  
 ];
 
 @NgModule({

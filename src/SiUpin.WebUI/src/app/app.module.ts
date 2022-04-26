@@ -5,10 +5,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
@@ -21,7 +24,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatBadgeModule } from '@angular/material/badge';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatListModule } from '@angular/material/list';
 
 import { DemoComponent } from './components/demo/demo.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
@@ -39,6 +43,8 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { AskToPmhpComponent } from './components/ask-to-pmhp/ask-to-pmhp.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
+import { AdminToolbarComponent } from './components/shared/admin-toolbar/admin-toolbar.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +63,9 @@ import { LoginComponent } from './components/login/login.component';
     BeritaIndexComponent,
     ContactUsComponent,
     AskToPmhpComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
+    AdminToolbarComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +90,12 @@ import { LoginComponent } from './components/login/login.component';
     MatCardModule,
     MatBadgeModule,
     MatDialogModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule,
+    MatRadioModule,
+    MatButtonToggleModule,
+    ReactiveFormsModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,71 @@
+<mat-toolbar color="primary" class="mat-elevation-z8">
+    <button class="sidenav-menu" mat-icon-button aria-label="sidenavmenu" (click)="triggerSideNavEmitter()">
+      <mat-icon>
+        menu
+      </mat-icon>
+    </button>
+
+    <img
+      style="width: 220px; height: 40px"
+      src="../assets/logo-siupin-white.png"
+    />
+
+    <span class="header-spacer"></span>
+    <a mat-button routerLink="/home">Home</a>
+    <a mat-button routerLink="/uph">UPH</a>
+    <a mat-button routerLink="/cluster">Cluster</a>
+    <a mat-button routerLink="/katalog">Katalog</a>
+    <a mat-button routerLink="/berita">Berita</a>
+    <a mat-button [matMenuTriggerFor]="menu"> Regulasi </a>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Undang - undang</button>
+      <button mat-menu-item>Peraturan Pemerintah</button>
+      <button mat-menu-item>Buku Kemitraan</button>
+    </mat-menu>
+
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+    <span class="header-spacer"></span>
+
+    <button mat-icon-button aria-label="Twitter">
+      <mat-icon>
+        <span
+          class="iconify"
+          data-icon="mdi-twitter"
+          data-inline="false"
+        ></span>
+      </mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Facebook">
+      <mat-icon>
+        <span
+          class="iconify"
+          data-icon="brandico:facebook"
+          data-inline="false"
+        ></span>
+      </mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Instagram">
+      <mat-icon>
+        <span
+          class="iconify"
+          data-icon="ant-design:instagram-filled"
+          data-inline="false"
+        ></span>
+      </mat-icon>
+    </button>
+
+    <span class="header-spacer"></span>
+    <a mat-raised-button color="primary" href="home">
+      <mat-icon
+        class="material-icons-outlined"
+        aria-hidden="false"
+        aria-label="Login"
+        >logout</mat-icon
+      >
+      Logout
+    </a>
+</mat-toolbar>

@@ -1,10 +1,99 @@
 <div class="page-wrap">
-    <app-toolbar></app-toolbar>
-    <main>
-      <div class="content">
-        <router-outlet></router-outlet>
-      </div>
-      <app-footer></app-footer>
-    </main>
-  </div>
-  
+  <app-admin-toolbar (sideNavEmitter)="onTriggeredSideNav()"></app-admin-toolbar>
+  <main>
+    <mat-sidenav-container class="example-container" *ngIf="shouldRun">
+      <mat-sidenav #sidenav [mode]="mode.value" [opened]="isShowing">
+        <mat-nav-list>
+          <a mat-list-item href="javascript:;">
+            <mat-icon class="mat-icon-rtl-mirror">
+              dashboard
+            </mat-icon>            
+            <span class="mat-list-item-content">
+              <span mat-ripple class="mat-ripple mat-list-item-ripple"></span>
+              <span class="mat-list-text"></span>
+              Dashboard
+            </span>
+          </a>
+          <a mat-list-item href="javascript:;">
+            <mat-icon class="mat-icon-rtl-mirror">
+              chevron_right
+            </mat-icon>                 
+            <span class="mat-list-item-content">
+              <span mat-ripple class="mat-ripple mat-list-item-ripple"></span>
+              <span class="mat-list-text"></span>
+              Data Master
+            </span>
+          </a>
+          <a mat-list-item href="javascript:;">
+            <mat-icon class="mat-icon-rtl-mirror">
+              chevron_right
+            </mat-icon>                 
+            <span class="mat-list-item-content">
+              <span mat-ripple class="mat-ripple mat-list-item-ripple"></span>
+              <span class="mat-list-text"></span>
+              Data UPH
+            </span>
+          </a>
+          <a mat-list-item href="javascript:;">
+            <mat-icon class="mat-icon-rtl-mirror">
+              business
+            </mat-icon>                 
+            <span class="mat-list-item-content">
+              <span mat-ripple class="mat-ripple mat-list-item-ripple"></span>
+              <span class="mat-list-text"></span>
+              Kemitraan
+            </span>
+          </a>
+          <a mat-list-item href="javascript:;">
+            <mat-icon class="mat-icon-rtl-mirror">
+              groups
+            </mat-icon>                 
+            <span class="mat-list-item-content">
+              <span mat-ripple class="mat-ripple mat-list-item-ripple"></span>
+              <span class="mat-list-text"></span>
+              Cluster
+            </span>
+          </a>
+          <a mat-list-item href="javascript:;">
+            <mat-icon class="mat-icon-rtl-mirror">
+              newspaper
+            </mat-icon>                 
+            <span class="mat-list-item-content">
+              <span mat-ripple class="mat-ripple mat-list-item-ripple"></span>
+              <span class="mat-list-text"></span>
+              Berita
+            </span>
+          </a>
+          <a mat-list-item href="javascript:;">
+            <mat-icon class="mat-icon-rtl-mirror">
+              inbox
+            </mat-icon>                 
+            <span class="mat-list-item-content">
+              <span mat-ripple class="mat-ripple mat-list-item-ripple"></span>
+              <span class="mat-list-text"></span>
+              Pesan Masuk
+            </span>
+          </a>
+          <a mat-list-item href="javascript:;">
+            <mat-icon class="mat-icon-rtl-mirror">
+              people
+            </mat-icon>                 
+            <span class="mat-list-item-content">
+              <span mat-ripple class="mat-ripple mat-list-item-ripple"></span>
+              <span class="mat-list-text"></span>
+              Pengguna
+            </span>
+          </a>
+       </mat-nav-list>
+      </mat-sidenav>
+    
+      <mat-sidenav-content>
+        <div class="content">
+          <router-outlet></router-outlet>
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+
+    <app-footer></app-footer>
+  </main>
+</div>
