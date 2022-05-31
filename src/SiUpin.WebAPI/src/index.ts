@@ -7,6 +7,7 @@ import _logger from "./infrastructure/logger/appLogger";
 import { userRouter } from "./routers/user.router";
 import { tokenGuard } from "./middlewares/token-guard";
 import { beritaRouter } from "./routers/berita.router";
+import { showMessage } from "../../siupin.shared/dist/src/berita";
 
 const path = __dirname + "/public/";
 const app: Application = express();
@@ -53,3 +54,5 @@ app.use("*", (_, response) => {
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 });
+
+showMessage();

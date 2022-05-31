@@ -32,21 +32,21 @@
 </mat-grid-list>
 
 <mat-grid-list cols="12"
-               gutterSize="10px"
+               gutterSize="15px"
                rowHeight="1:5"
                style="margin-top: 2em">
   <mat-grid-tile colspan="4"
-                 *ngFor="let item of [].constructor(beritaRow); let i = index">
+                 *ngFor="let berita of beritas">
     <mat-card class="example-card mat-elevation-z3">
       <mat-card-header>
-        <mat-card-title style="font-size: 14px">Berita Title {{ i }}</mat-card-title>
+        <mat-card-title style="font-size: 14px">{{ berita.Title }}</mat-card-title>
         <mat-card-subtitle>Jakarta Selatan</mat-card-subtitle>
       </mat-card-header>
       <img mat-card-image
            src="https://material.angular.io/assets/img/examples/shiba2.jpg"
            alt="Photo of a Shiba Inu" />
       <mat-card-content>
-        <p>The Shiba Inu is the smallest.</p>
+        {{ berita.Description }}
       </mat-card-content>
     </mat-card>
   </mat-grid-tile>

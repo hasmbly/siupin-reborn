@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  title: 'SiUpin',
+  apiURL: 'http://localhost:4000/api'
 };

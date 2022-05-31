@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
+import { BeritaService } from 'src/app/services/berita.service';
 import { Berita } from 'src/models/berita';
 
 @Component({
@@ -8,8 +8,8 @@ import { Berita } from 'src/models/berita';
   styleUrls: ['./berita-index.component.css'],
 })
 export class BeritaIndexComponent implements OnInit {
-  beritaRow: number = 5;
-  value: string = '';
+  beritaRow: number = 0;
+  value: string = "";
   beritas: any[] = [];
 
   sideNavBodyRowspan: number =
@@ -17,14 +17,15 @@ export class BeritaIndexComponent implements OnInit {
       ? 2
       : Math.ceil(this.beritaRow / 2);
 
-  constructor(private dataService: DataService) { }
+  constructor(private beritaService: BeritaService) { }
 
   ngOnInit(): void {
-    this.dataService.getBeritas().subscribe((data: Berita[]) =>
+    this.beritaService.getBeritas().subscribe((data: Berita[]) =>
     {
       console.log(data);
       
       this.beritas = data;
+      this.beritaRow = data.length;
     })
   }
 }

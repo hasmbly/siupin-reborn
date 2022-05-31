@@ -7,9 +7,20 @@ export class BeritaService {
     return BeritaService._berita;
   }
 
-  async getAllBerita(): Promise<Berita[]> {
-    const beritas = await Berita.findAll({
+  async getAllBerita(): Promise<any> {
+    const datas = await Berita.findAll({
       where: {},
+    });
+
+    let beritas: any = [];
+
+    datas.forEach(data => {
+      let berita =
+      {
+        'FileName': data.Title
+      };
+
+      beritas.push(berita);
     });
 
     return beritas;
